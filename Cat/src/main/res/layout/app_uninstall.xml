@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/app_uninstall_lv"
         android:layout_marginTop="120dp"
-        android:text="应用卸载"
+        android:text="@string/uninstall_app"
         android:textColor="@color/white"
         android:textSize="40sp"/>
 </RelativeLayout>

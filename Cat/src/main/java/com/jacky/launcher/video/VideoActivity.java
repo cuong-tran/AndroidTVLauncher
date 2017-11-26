@@ -11,8 +11,8 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 public class VideoActivity extends Activity {
 
-    private JCVideoPlayerStandard jcVideoPlayerStandard;
     public static final String VIDEO = "Video";
+    private JCVideoPlayerStandard jcVideoPlayerStandard;
     private MediaModel mMediaModel;
 
     @Override

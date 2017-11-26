@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Smartbox MyTV</string>
+    <string name="app_header_livetv_name">Truyền hình IP</string>
+    <string name="app_header_travel_photo_name">Danh lam thắng cảnh</string>
+    <string name="app_header_video_name">Video</string>
+    <string name="app_header_app_name">Ứng dụng</string>
+    <string name="app_header_function_name">Chức năng khác</string>
+    <string name="uninstall_app">Gỡ bỏ ứng dụng</string>
+    <string name="action_video_play">Phát</string>
+    <string name="video_parkour_content">Red Bull Art of Motion lần đầu tiên được giới thiệu là một cuộc thi năm 2007 tại Vienna (AUT) và từ đó nó đã trở thành sự kiện có uy tín nhất và nổi tiếng nhất trong cộng đồng Free Running và Parkours. Trong năm 2011, Tim Shieff (Anh) đã giành được cuộc thi đầu tiên tại London. Vào cuối tháng 7, Jason Paul (GER) đã nhận được danh hiệu cao quý nhất từ một ban giám khảo trong một cuộc cạnh tranh trước tòa nhà cao nhất Nhật Bản ở Yokohama. Nhà diễn viên đóng thế nổi tiếng thế giới và tay trống Ryan Doyle (Anh) đã giành chiến thắng tại cuộc thi ở Sao Paulo (BRA). Marcus Gustafsson (SWE) đã giành được sự cạnh tranh tại Detroit (Mỹ) và Pavel Petkuns từ Latvia vào những năm cuối của Red Bull Art of Motion ở Santorini (GRE).</string>
+    <string name="video_sintel_content">Phim là cuộc hành trình gian khổ của cô gái dũng cảm Sintel đi tìm chú rồng Scales. Cuối cùng trong cuộc hành trình ấy cô có tìm được chú rồng của mình không…</string>
+    <string name="video_content_bigbuckbunny">Một chú thỏ với bộ lông mượt mà đồ sộ cực dễ thương vừa tỉnh giấc đã bị chọc phá không thương tiếc bởi một đám sóc bay, quyết tâm đập nát sự vui vẻ của thỏ.</string>
+</resources>

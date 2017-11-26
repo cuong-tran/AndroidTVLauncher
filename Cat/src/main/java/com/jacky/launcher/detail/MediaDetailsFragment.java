@@ -24,6 +24,8 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
+import com.jacky.launcher.R;
+import com.jacky.launcher.video.NativeVideoActivity;
 import com.jacky.launcher.video.VideoActivity;
 
 /**
@@ -33,11 +35,11 @@ import com.jacky.launcher.video.VideoActivity;
  */
 public class MediaDetailsFragment extends DetailsFragment {
 
+    public static final boolean USE_NATIVE_PLAYER = false;
+    private static final int ACTION_VIDEO_PLAY = 1;
     private ArrayObjectAdapter mRowsAdapter;
     private MediaModel mMediaModel;
     private Context mContext;
-    private static final int ACTION_WATCH_TRAILER = 1;
-
     private BackgroundManager mBackgroundManager;
     private DisplayMetrics mMetrics;
 
@@ -66,11 +68,18 @@ public class MediaDetailsFragment extends DetailsFragment {
                 new DetailsOverviewLogoPresenter());
 
         rowPresenter.setOnActionClickedListener(new OnActionClickedListener() {
+
             @Override
             public void onActionClicked(Action action) {
-                if (action.getId() == ACTION_WATCH_TRAILER) {
-                    Intent intent = new Intent(getActivity(), VideoActivity.class);
-                    intent.putExtra(VideoActivity.VIDEO, mMediaModel);
+                if (action.getId() == ACTION_VIDEO_PLAY) {
+                    Intent intent;
+                    if (USE_NATIVE_PLAYER) {
+                        intent = new Intent(getActivity(), NativeVideoActivity.class);
+                        intent.putExtra(NativeVideoActivity.VIDEO, mMediaModel);
+                    } else {
+                        intent = new Intent(getActivity(), VideoActivity.class);
+                        intent.putExtra(VideoActivity.VIDEO, mMediaModel);
+                    }
                     startActivity(intent);
                 } else {
                     Toast.makeText(getActivity(), action.toString(), Toast.LENGTH_SHORT).show();
@@ -105,8 +114,9 @@ public class MediaDetailsFragment extends DetailsFragment {
         updateBackground(mMediaModel.getImageUrl());
 
         SparseArrayObjectAdapter adapter = new SparseArrayObjectAdapter();
+        // If current MediaModel has a Video URL then show the Play button
         if (!mMediaModel.getVideoUrl().isEmpty()) {
-            adapter.set(ACTION_WATCH_TRAILER, new Action(ACTION_WATCH_TRAILER, "播放"));
+            adapter.set(ACTION_VIDEO_PLAY, new Action(ACTION_VIDEO_PLAY, getString(R.string.action_video_play)));
         }
         detailsOverview.setActionsAdapter(adapter);
         mRowsAdapter.add(detailsOverview);

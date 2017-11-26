@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * 应用卸载类
+ *
  * @author jacky
  * @version 1.0
  * @since 2016.4.1

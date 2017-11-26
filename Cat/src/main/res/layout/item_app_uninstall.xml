@@ -23,14 +23,4 @@
         android:textColor="@color/white"
         android:textSize="30sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_alignParentRight="true"
-        android:layout_margin="5dp"
-        android:gravity="center"
-        android:text="卸载"
-        android:textColor="@color/white"
-        android:textSize="30sp"/>
-
 </RelativeLayout>

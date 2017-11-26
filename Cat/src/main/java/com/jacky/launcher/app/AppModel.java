@@ -1,4 +1,3 @@
-
 package com.jacky.launcher.app;
 
 import android.graphics.drawable.Drawable;
@@ -19,52 +18,52 @@ public class AppModel {
         return this.dataDir;
     }
 
-    public Drawable getIcon() {
-        return this.icon;
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public String getPackageName() {
-        return this.packageName;
-    }
-
-    public int getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public int getPosition() {
-        return this.position;
-    }
-
     public void setDataDir(String paramString) {
         this.dataDir = paramString;
+    }
+
+    public Drawable getIcon() {
+        return this.icon;
     }
 
     public void setIcon(Drawable paramDrawable) {
         this.icon = paramDrawable;
     }
 
+    public String getId() {
+        return this.id;
+    }
+
     public void setId(String paramString) {
         this.id = paramString;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public void setName(String paramString) {
         this.name = paramString;
     }
 
+    public String getPackageName() {
+        return this.packageName;
+    }
+
     public void setPackageName(String paramString) {
         this.packageName = paramString;
     }
 
+    public int getPageIndex() {
+        return this.pageIndex;
+    }
+
     public void setPageIndex(int paramInt) {
         this.pageIndex = paramInt;
+    }
+
+    public int getPosition() {
+        return this.position;
     }
 
     public void setPosition(int paramInt) {

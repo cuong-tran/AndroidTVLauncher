@@ -13,7 +13,7 @@ public class MediaDetailsDescriptionPresenter extends AbstractDetailsDescription
     @Override
     protected void onBindDescription(ViewHolder viewHolder, Object itemData) {
 
-        if(itemData instanceof MediaModel){
+        if (itemData instanceof MediaModel) {
             MediaModel mediaModel = (MediaModel) itemData;
             viewHolder.getSubtitle().setText(mediaModel.getTitle());
             viewHolder.getBody().setText(mediaModel.getContent());

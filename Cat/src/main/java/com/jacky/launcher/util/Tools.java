@@ -29,10 +29,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class Tools {
-    private static String TAG = "Tools";
-
     private final static String[] hexDigits = {"0", "1", "2", "3", "4", "5",
-            "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
+            "6", "7", "8", "9", "a", "b", "c", "d", "e", "f" };
+    private static String TAG = "Tools";
 
     private Tools() throws InstantiationException {
         throw new InstantiationException("This class is not created for instantiaation");
@@ -155,14 +154,14 @@ public final class Tools {
 
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
-            Date now = new Date(System.currentTimeMillis());// ��ȡ��ǰʱ��
+            Date now = new Date(System.currentTimeMillis());
             Date endData = df.parse(endTime);
             long l = endData.getTime() - countDown - now.getTime();
             long day = l / (24 * 60 * 60 * 1000);
             long hour = l / (60 * 60 * 1000) - day * 24;
             long min = (l / (60 * 1000)) - day * 24 * 60 - hour * 60;
             long s = l / 1000 - day * 24 * 60 * 60 - hour * 60 * 60 - min * 60;
-            return "ʣ��" + day + "��" + hour + "Сʱ" + min + "��" + s + "��";
+            return "Time" + day + "Day" + hour + "Hour" + min + "Min" + s + "Sec";
         } catch (ParseException e) {
             e.printStackTrace();
         }

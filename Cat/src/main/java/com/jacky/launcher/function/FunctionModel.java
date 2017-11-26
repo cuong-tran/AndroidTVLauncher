@@ -1,4 +1,3 @@
-
 package com.jacky.launcher.function;
 
 import android.content.Context;
@@ -16,6 +15,19 @@ public class FunctionModel {
     private String id;
     private String name;
     private Intent mIntent;
+
+    public static List<FunctionModel> getFunctionList(Context context) {
+        List<FunctionModel> functionModels = new ArrayList<>();
+
+        FunctionModel appUninstall = new FunctionModel();
+        appUninstall.setName(context.getString(R.string.uninstall_app));
+        appUninstall.setIcon(R.drawable.ic_app_uninstall);
+        appUninstall.setIntent(new Intent(context, AppUninstall.class));
+
+        functionModels.add(appUninstall);
+
+        return functionModels;
+    }
 
     public int getIcon() {
         return icon;
@@ -47,18 +59,5 @@ public class FunctionModel {
 
     public void setIntent(Intent intent) {
         mIntent = intent;
-    }
-
-    public static List<FunctionModel> getFunctionList(Context context) {
-        List<FunctionModel> functionModels = new ArrayList<>();
-
-        FunctionModel appUninstall = new FunctionModel();
-        appUninstall.setName("应用卸载");
-        appUninstall.setIcon(R.drawable.ic_app_uninstall);
-        appUninstall.setIntent(new Intent(context, AppUninstall.class));
-
-        functionModels.add(appUninstall);
-
-        return functionModels;
     }
 }

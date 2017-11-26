@@ -6,7 +6,7 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        applicationId "com.jacky.launcher"
+        applicationId 'vn.vnpttech.androidtvlauncher'
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
@@ -45,18 +45,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:support-v4:26.1.0'
+//    compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support:appcompat-v7:26.1.0'   // Support old API devices
 
     compile 'com.android.support:leanback-v17:26.1.0'
-    compile 'com.android.support:preference-leanback-v17:26.1.0'
+//    compile 'com.android.support:preference-leanback-v17:26.1.0'
 
     compile 'fm.jiecao:jiecaovideoplayer:4.6.4'
 
-    compile 'com.android.support:recyclerview-v7:26.1.0'
-    compile 'com.android.support:cardview-v7:26.1.0'
+//    compile 'com.android.support:recyclerview-v7:26.1.0'
+//    compile 'com.android.support:cardview-v7:26.1.0'
     compile 'com.github.bumptech.glide:glide:3.8.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }

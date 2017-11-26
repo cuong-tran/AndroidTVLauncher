@@ -1,7 +1,13 @@
 <resources>
-    <string name="app_name">CatLauncher</string>
-    <string name="app_header_photo_name">Photo</string>
-    <string name="app_header_video_name">Live</string>
-    <string name="app_header_app_name">App</string>
-    <string name="app_header_function_name">Function</string>
+    <string name="app_name">Smartbox MyTV</string>
+    <string name="app_header_livetv_name">Live TV</string>
+    <string name="app_header_travel_photo_name">Travel</string>
+    <string name="app_header_video_name">Videos</string>
+    <string name="app_header_app_name">Applications</string>
+    <string name="app_header_function_name">Functions</string>
+    <string name="uninstall_app">Uninstall apps</string>
+    <string name="action_video_play">Play</string>
+    <string name="video_parkour_content">Red Bull Art of Motion was first introduced as a competition in 2007 in Vienna (AUT) and it has since then turned into the state-of-the-art and most prestigious event in the Free Running and Parkours community. In 2011 Tim Shieff (UK) won the first competition in London. At the end of July, Jason Paul (GER) took the top honors from a jury in a competition in front of Japan’s tallest building in Yokohama. The world-famous stuntman and Free Runner Ryan Doyle (UK) was victorious at the competition in Sao Paulo (BRA). Marcus Gustafsson (SWE) won the competition in Detroit (USA) and Pavel Petkuns from Latvia the last years Red Bull Art of Motion in Santorini (GRE).</string>
+    <string name="video_sintel_content">A young girl by the name of Sintel befriends an injured baby dragon, who she calls Scales, only to have it snatched away one day by an another adult dragon. She goes on a quest to reclaim her friend and endures many hardships along the way.</string>
+    <string name="video_content_bigbuckbunny">A recently awoken enormous and utterly adorable fluffy rabbit is heartlessly harassed by a flying squirrel\'s gang of rodents who are determined to squash his happiness.</string>
 </resources>

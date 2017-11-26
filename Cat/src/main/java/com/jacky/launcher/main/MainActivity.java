@@ -1,4 +1,3 @@
-
 package com.jacky.launcher.main;
 
 import android.app.Activity;
@@ -32,6 +31,9 @@ import com.jacky.launcher.detail.MediaDetailsActivity;
 import com.jacky.launcher.detail.MediaModel;
 import com.jacky.launcher.function.FunctionCardPresenter;
 import com.jacky.launcher.function.FunctionModel;
+import com.jacky.launcher.livetv.LivetvActivity;
+import com.jacky.launcher.livetv.LivetvCardPresenter;
+import com.jacky.launcher.livetv.LivetvModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +71,7 @@ public class MainActivity extends Activity {
     private void buildRowsAdapter() {
         rowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
 
+        addLivetvRow(1);
         addPhotoRow();
         addVideoRow();
         addAppRow();
@@ -101,6 +104,11 @@ public class MainActivity extends Activity {
                     if (intent != null) {
                         startActivity(intent);
                     }
+                } else if (item instanceof LivetvModel) {
+                    LivetvModel livetvModel = (LivetvModel) item;
+                    Intent myIntent = new Intent(mContext, LivetvActivity.class);
+                    myIntent.putExtra("ChannelIdx", livetvModel.getVideoUrl());
+                    startActivity(myIntent);
                 }
             }
         });
@@ -130,8 +138,19 @@ public class MainActivity extends Activity {
         });
     }
 
+    private void addLivetvRow(int groupNumber) {
+        String headerName = getResources().getString(R.string.app_header_livetv_name);
+        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new LivetvCardPresenter());
+
+        for (LivetvModel livetvModel : LivetvModel.getLivetvModels(mContext)) {
+            listRowAdapter.add(livetvModel);
+        }
+        HeaderItem header = new HeaderItem(0, headerName);
+        rowsAdapter.add(new ListRow(header, listRowAdapter));
+    }
+
     private void addPhotoRow() {
-        String headerName = getResources().getString(R.string.app_header_photo_name);
+        String headerName = getResources().getString(R.string.app_header_travel_photo_name);
         ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new ImgCardPresenter());
 
         for (MediaModel mediaModel : MediaModel.getPhotoModels()) {
@@ -144,7 +163,7 @@ public class MainActivity extends Activity {
     private void addVideoRow() {
         String headerName = getResources().getString(R.string.app_header_video_name);
         ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new ImgCardPresenter());
-        for (MediaModel mediaModel : MediaModel.getVideoModels()) {
+        for (MediaModel mediaModel : MediaModel.getVideoModels(mContext)) {
             listRowAdapter.add(mediaModel);
         }
         HeaderItem header = new HeaderItem(0, headerName);
